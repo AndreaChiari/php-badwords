@@ -2,10 +2,10 @@
 $paragraph = $_GET['paragraph'];
 $filter = $_GET['filter'];
 $censored = '***';
-
 var_dump($paragraph); 
 
-$filter_term = str_replace($paragraph ,$censored,$paragraph );
+$filter_term = str_replace($filter ,$censored, $paragraph );
+var_dump($filter_term); 
 
 ?>
 
@@ -21,12 +21,5 @@ $filter_term = str_replace($paragraph ,$censored,$paragraph );
     <h1><?= $paragraph ?></h1>
     <h1><?= $filter ?></h1>
     <h1><?= $filter_term ?> </h1>
-
-    <script>
-if($paragraph.includes($filter)){
-    $filter = $censored
-}
-
-    </script>
 </body>
 </html>
